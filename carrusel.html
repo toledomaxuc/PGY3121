@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carrusel de Imágenes de Perros</title>
+	<style>
+		/* Estilos para el carrusel */
+		.slideshow {
+			position: relative;
+			height: 400px;
+			width: 600px;
+			margin: 0 auto;
+			overflow: hidden;
+			border: 5px solid #ccc;
+		}
+
+		.slideshow img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+			height: auto;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+
+		.slideshow img.active {
+			opacity: 1;
+		}
+
+		/* Estilos para los botones del carrusel */
+		.prev, .next {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 50px;
+			height: 50px;
+			background-color: rgba(255, 255, 255, 0.5);
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+			font-size: 30px;
+			color: #333;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		.prev:hover, .next:hover {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+
+		.prev {
+			left: 20px;
+		}
+
+		.next {
+			right: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="slideshow">
+		<img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Perro 1" class="active">
+		<img src="https://images.pexels.com/photos/235805/pexels-photo-235805.jpeg" alt="Perro 2">
+		<img src="https://images.pexels.com/photos/247408/pexels-photo-247408.jpeg" alt="Perro 3">
+		<img src="https://images.pexels.com/photos/1712274/pexels-photo-1712274.jpeg" alt="Perro 4">
+		<img src="https://images.pexels.com/photos/1704127/pexels-photo-1704127.jpeg" alt="Perro 5">
+		<img src="https://images.pexels.com/photos/1309343/pexels-photo-1309343.jpeg" alt="Perro 6">
+		<img src="https://images.pexels.com/photos/3059747/pexels-photo-3059747.jpeg" alt="Perro 7">
+		<img src="https://images.pexels.com/photos/2023394/pexels-photo-2023394.jpeg" alt="Perro 8">
+		<img src="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg" alt="Perro 9">
+		<img src="https://images.pexels.com/photos/1641861/pexels-photo-1641861.jpeg" alt="Perro 10">
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+	</div>
+
+	<script>
+		var slideIndex
