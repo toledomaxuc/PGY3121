@@ -1,77 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Carrusel de Imágenes de Perros</title>
-	<style>
-		/* Estilos para el carrusel */
-		.slideshow {
-			position: relative;
-			height: 400px;
-			width: 600px;
-			margin: 0 auto;
-			overflow: hidden;
-			border: 5px solid #ccc;
-		}
-
-		.slideshow img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			max-width: 100%;
-			height: auto;
-			opacity: 0;
-			transition: opacity 1s ease-in-out;
-		}
-
-		.slideshow img.active {
-			opacity: 1;
-		}
-
-		/* Estilos para los botones del carrusel */
-		.prev, .next {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 50px;
-			height: 50px;
-			background-color: rgba(255, 255, 255, 0.5);
-			border-radius: 50%;
-			text-align: center;
-			line-height: 50px;
-			font-size: 30px;
-			color: #333;
-			cursor: pointer;
-			transition: background-color 0.3s ease-in-out;
-		}
-
-		.prev:hover, .next:hover {
-			background-color: rgba(255, 255, 255, 0.8);
-		}
-
-		.prev {
-			left: 20px;
-		}
-
-		.next {
-			right: 20px;
-		}
-	</style>
+	<title>Carrusel de Imágenes con Bootstrap</title>
+	<!-- Agregar los enlaces a los archivos CSS de Bootstrap -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-	<div class="slideshow">
-		<img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Perro 1" class="active">
-		<img src="https://images.pexels.com/photos/235805/pexels-photo-235805.jpeg" alt="Perro 2">
-		<img src="https://images.pexels.com/photos/247408/pexels-photo-247408.jpeg" alt="Perro 3">
-		<img src="https://images.pexels.com/photos/1712274/pexels-photo-1712274.jpeg" alt="Perro 4">
-		<img src="https://images.pexels.com/photos/1704127/pexels-photo-1704127.jpeg" alt="Perro 5">
-		<img src="https://images.pexels.com/photos/1309343/pexels-photo-1309343.jpeg" alt="Perro 6">
-		<img src="https://images.pexels.com/photos/3059747/pexels-photo-3059747.jpeg" alt="Perro 7">
-		<img src="https://images.pexels.com/photos/2023394/pexels-photo-2023394.jpeg" alt="Perro 8">
-		<img src="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg" alt="Perro 9">
-		<img src="https://images.pexels.com/photos/1641861/pexels-photo-1641861.jpeg" alt="Perro 10">
-		<a class="prev" onclick="plusSlides(-1)">❮</a>
-		<a class="next" onclick="plusSlides(1)">❯</a>
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicadores del carrusel -->
+		<ul class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ul>
+
+		<!-- Imágenes del carrusel -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Perro 1">
+			</div>
+			<div class="carousel-item">
+				<img src="https://images.pexels.com/photos/235805/pexels-photo-235805.jpeg" alt="Perro 2">
+			</div>
+			<div class="carousel-item">
+				<img src="https://images.pexels.com/photos/247408/pexels-photo-247408.jpeg" alt="Perro 3">
+			</div>
+		</div>
+
+		<!-- Controles del carrusel -->
+		<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Anterior</span>
+		</a>
+		<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Siguiente</span>
+		</a>
 	</div>
 
-	<script>
-		var slideIndex
+	<!-- Agregar los enlaces a los archivos JS de Bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
